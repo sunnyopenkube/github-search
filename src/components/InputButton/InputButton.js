@@ -14,7 +14,7 @@ export default class InputButton extends Component{
 
     render(){
         return(
-            <div>InputButton</div>
+            <button className={'ghs-button '+this.props.btnType}>{this.props.btnText}</button>
         )
     }
 }

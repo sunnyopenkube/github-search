@@ -14,7 +14,7 @@ export default class InputText extends Component{
 
     render(){
         return(
-            <div>InputText</div>
+            <input className="ghs-input-text" type="text" placeholder={this.props.placeholder} />
         )
     }
 }

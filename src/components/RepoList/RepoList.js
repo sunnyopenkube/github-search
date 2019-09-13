@@ -14,7 +14,7 @@ export default class RepoList extends Component{
 
     render(){
         return(
-            <div>RepoList</div>
+            <div className="ghs-rl">RepoList</div>
         )
     }
 }

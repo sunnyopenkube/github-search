@@ -1,3 +1,23 @@
-.SearchTool{
-    
+.ghs-st{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e0e0e0;
+}
+
+.ghs-st .ghs-search-header{
+    display: flex;
+    flex-direction: column;
+    background-color: #fafafa;
+    padding: 2rem 1.5rem;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.ghs-st .ghs-search-header .ghs-p-1,.ghs-p-2{
+    display: flex;
+
+}
+
+.ghs-st .ghs-search-header .ghs-p-2{
+    margin-top: 1.8rem;
 }

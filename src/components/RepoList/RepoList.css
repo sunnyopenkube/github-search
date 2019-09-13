@@ -1,0 +1,10 @@
+.ghs-rl{
+	color: #5F564A;
+    font-weight: 500;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.ghs-rl:last-child{
+	border-bottom: 0;
+}

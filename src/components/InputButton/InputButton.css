@@ -1,0 +1,21 @@
+button.ghs-button{
+	margin-right: 0.5rem;
+	margin-left: 0.5rem;
+	font-weight: 700;
+	font-size: 14px;
+	border-radius: 3px;
+	padding: 0 1rem;
+	border: 1px solid #E6E6E6;
+	outline: 0;
+	cursor: pointer;
+}
+
+button.ghs-button.primary{
+	background-color: #8BBF56;
+	color: #fff;
+}
+
+button.ghs-button.secondary{
+	background-color: #F4F4F4;
+	color: #9D4C54;
+}
