@@ -14,7 +14,7 @@ export default class InputText extends Component{
 
     render(){
         return(
-            <input className="ghs-input-text" type="text" placeholder={this.props.placeholder} />
+            <input className="ghs-input-text" type="text" placeholder={this.props.placeholder} onChange={(e) => this.props.onChange(e.target.value)} value={this.props.value} />
         )
     }
 }

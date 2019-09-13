@@ -14,7 +14,7 @@ export default class InputButton extends Component{
 
     render(){
         return(
-            <button className={'ghs-button '+this.props.btnType}>{this.props.btnText}</button>
+            <button className={'ghs-button '+this.props.btnType} onClick={() => this.props.callBack()}>{this.props.btnText}</button>
         )
     }
 }
