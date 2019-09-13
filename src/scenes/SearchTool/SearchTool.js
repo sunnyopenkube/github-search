@@ -19,10 +19,7 @@ export default class SearchTool extends Component{
         };
     }
 
-    componentDidMount(){
-
-    }
-
+    // Fetch repo from api
     fetchRepositories = () => {
         let self = this;
         let baseUrl = urlConfig.apiBaseURL
@@ -50,6 +47,7 @@ export default class SearchTool extends Component{
             })
     }
 
+    // clear all user with repo
     clearUser = () => {
         this.setState({
             username: "",
@@ -58,10 +56,12 @@ export default class SearchTool extends Component{
         })
     }
 
+
     setUsername = (username) => {
         this.setState({username})
     }
 
+    // filter logic enabled
     filterRepositoryList = (text) =>{
         if(text && this.state.fetchedRepositoryList.length > 0){
             let repoList = this.state.fetchedRepositoryList
@@ -83,6 +83,7 @@ export default class SearchTool extends Component{
         }
     }
 
+    // clearing filtered text
     clearFilterText = () => {
         this.setState({
             filteredRepositoryList: this.state.fetchedRepositoryList,
@@ -90,6 +91,7 @@ export default class SearchTool extends Component{
         })
     }
 
+    // looping and rendering repo list
     renderRepoList = () => {
         let list = []
         for(let i in this.state.filteredRepositoryList){
