@@ -78,7 +78,8 @@ export default class SearchTool extends Component{
         }
         else{
             this.setState({
-                filteredRepositoryList: this.state.fetchedRepositoryList
+                filteredRepositoryList: this.state.fetchedRepositoryList,
+                filteredText: ""
             })
         }
     }
