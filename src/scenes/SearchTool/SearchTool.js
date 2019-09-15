@@ -4,6 +4,8 @@ import './SearchTool.css';
 import RepoList from '../../components/RepoList/RepoList'
 import InputText from '../../components/InputText/InputText'
 import InputButton from '../../components/InputButton/InputButton'
+import LoadingScreen from '../../components/LoadingScreen/LoadingScreen'
+import ErrorScreen from '../../components/ErrorScreen/ErrorScreen'
 
 import {urlConfig} from '../../constants/constant'
 
@@ -15,13 +17,17 @@ export default class SearchTool extends Component{
             username: "",
             fetchedRepositoryList: [],
             filteredRepositoryList: [],
-            filteredText: ""
+            filteredText: "",
+            pageStatus: "active"
         };
     }
 
     // Fetch repo from api
     fetchRepositories = () => {
         let self = this;
+        this.setState({
+            pageStatus: "loading"
+        })
         let baseUrl = urlConfig.apiBaseURL
         fetch(baseUrl+'/users/'+this.state.username+'/repos', {
               method: 'GET',
@@ -35,15 +41,20 @@ export default class SearchTool extends Component{
                 (result) => {
                     self.setState({
                         fetchedRepositoryList: result,
-                        filteredRepositoryList: result
+                        filteredRepositoryList: result,
+                        pageStatus: "active"
                     })
                 },
                 (error) => {
-                    console.log(error);
+                    self.setState({
+                        pageStatus: "error"
+                    })
                 }
             )
             .catch(function() {
-                console.log("error");
+                self.setState({
+                    pageStatus: "error"
+                })
             })
     }
 
@@ -95,9 +106,18 @@ export default class SearchTool extends Component{
     // looping and rendering repo list
     renderRepoList = () => {
         let list = []
-        for(let i in this.state.filteredRepositoryList){
-            list.push(<RepoList key={this.state.filteredRepositoryList[i].id} name={this.state.filteredRepositoryList[i].name} />)
+        if(this.state.pageStatus === "active"){
+            for(let i in this.state.filteredRepositoryList){
+                list.push(<RepoList key={this.state.filteredRepositoryList[i].id} name={this.state.filteredRepositoryList[i].name} filteredText={this.state.filteredText} />)
+            }
         }
+        else if(this.state.pageStatus === "loading"){
+            list.push(<LoadingScreen message="Please wait... We are fetching the details." />)
+        }
+        else if(this.tate.pageStatus === "error"){
+            list.push(<ErrorScreen message="Oops!!! Something went wrong." />)
+        }
+        
 
         return list
     }

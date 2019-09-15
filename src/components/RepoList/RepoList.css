@@ -5,6 +5,10 @@
     border-bottom: 1px solid #EEEEEE;
 }
 
+.ghs-rl span{
+	background-color: #8bbf56;
+}
+
 .ghs-rl:last-child{
 	border-bottom: 0;
 }
