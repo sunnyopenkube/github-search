@@ -8,13 +8,13 @@ To start the project:
 
 Project is divided into: 
 
-1. Screens
+1. Screens: 
 All the top level pages are inside screen directory
 
-2. Components
+2. Components: 
 All the components are inside component directory
 
-3. Constants
+3. Constants: 
 Constants like base url are stored in contants directory
 
 ## Project Build
