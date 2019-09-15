@@ -1,68 +1,46 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Details
 
-## Available Scripts
-
-In the project directory, you can run:
+To start the project: 
 
 ### `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Project Architecture
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Project is divided into: 
 
-### `npm test`
+1. Screens
+All the top level pages are inside screen directory
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Components
+All the components are inside component directory
 
-### `npm run build`
+3. Constants
+Constants like base url are stored in contants directory
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project Build
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+To build the project, run `npm run build`. The build code is inside build directory
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Project Deployment
 
-### `npm run eject`
+Project is deployed on firebase. Firebase is a google product, specially for apps and web deployment.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+To deploy, run firebase deploy.(Note, make sure you setup firebase cli in your local and also create your account in firebase for deployment)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Currently you can access the project on https://github-search-e03b9.firebaseapp.com/
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Thought Process
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Before starting any project from scratch, I follow the below steps:
 
-## Learn More
+1. Get the requirement and understand it properly
+2. Plan the architecture and the approach to be taken for this project.
+3. Setup the basic architecture of project(code level).
+4. Start building the features step by step.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Level of complexity
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+For me, project was not tough as I had already dealt with the github apis in one of my personal project.
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Thanks and Cheers,
