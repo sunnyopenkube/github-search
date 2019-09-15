@@ -8,6 +8,10 @@ export default class RepoList extends Component{
         this.state = {};
     }
 
+    openUrlNewTab = () => {
+        window.open(this.props.htmlUrl, '_blank');
+    }
+
     renderSuggestionText = (text) => {
         let name= text;
         if(this.props.filteredText){
@@ -19,7 +23,7 @@ export default class RepoList extends Component{
 
     render(){
         return(
-            <div className="ghs-rl" dangerouslySetInnerHTML={{__html: this.renderSuggestionText(this.props.name)}}></div>
+            <div className="ghs-rl" dangerouslySetInnerHTML={{__html: this.renderSuggestionText(this.props.name)}} onClick={() => this.openUrlNewTab()}></div>
         )
     }
 }

@@ -3,6 +3,7 @@
     font-weight: 500;
     padding: 1rem 1.5rem;
     border-bottom: 1px solid #EEEEEE;
+    cursor: pointer;
 }
 
 .ghs-rl span{

@@ -108,7 +108,7 @@ export default class SearchTool extends Component{
         let list = []
         if(this.state.pageStatus === "active"){
             for(let i in this.state.filteredRepositoryList){
-                list.push(<RepoList key={this.state.filteredRepositoryList[i].id} name={this.state.filteredRepositoryList[i].name} filteredText={this.state.filteredText} />)
+                list.push(<RepoList key={this.state.filteredRepositoryList[i].id} name={this.state.filteredRepositoryList[i].name} filteredText={this.state.filteredText} htmlUrl={this.state.filteredRepositoryList[i].html_url} />)
             }
         }
         else if(this.state.pageStatus === "loading"){
