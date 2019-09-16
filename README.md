@@ -38,9 +38,6 @@ Before starting any project from scratch, I follow the below steps:
 3. Setup the basic architecture of project(code level).
 4. Start building the features step by step.
 
-## Level of complexity
-
-For me, project was not tough as I had already dealt with the github apis in one of my personal project.
 
 
 Thanks and Cheers,
